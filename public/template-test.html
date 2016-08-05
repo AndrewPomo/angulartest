@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="templateTest">
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap an Angular Module</title>
+    <style type="text/css">
+    	li:first-child {
+			font-style: italic;
+		}
+		li:last-child {
+		    font-weight: bold;
+		}
+    </style>
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="/js/templateTest.js"></script>
+    
+	<ul>
+	    <li ng-repeat="num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" ng-hide="num %3 == 0">
+	    	{{ num }}
+	    </li>
+	</ul>
+
+	<ul>
+	    <li ng-repeat="alpha in ['a', 'b', 'c', 'd', 'e', 'f']">
+	    	{{ alpha | uppercase}}
+	    </li>
+	</ul>
+
+    
+</body>
+</html>
